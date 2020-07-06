@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+section {
+  display: block;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -748,7 +751,7 @@ hr {
   margin-right: 0px;
 }
 .parent {
-  width: 852.8px;
+  font-family: cursive;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -765,7 +768,7 @@ hr {
 
 
 .childs {
-  width: 220px;
+  width: 280px;
   padding: 0px 20px;
 }
 
@@ -834,6 +837,7 @@ hr {
 
 .brands-box {
   width: 60vw;
+  height: 100vh;
   min-height: 600px;
   z-index: 1;
   background: #1d78be;
@@ -843,19 +847,18 @@ hr {
     "Lucida Sans", Arial, sans-serif;
 }
 
-@media only screen and (max-width: 1023px) {
-  .brands-box {
-    width: 100%;
-    transform: translateY(0);
-  }
-}
-
-@media (max-height: 650px) {
+@media only screen and (max-height: 650px) {
   .brands-box {
     height: 100%;
   }
 }
-@media (max-width: 600px) {
+
+@media (min-height: 450px) {
+  .brands-box {
+    height: 100%;
+  }
+}
+@media (min-width: 900px) {
   .brands-box {
     height: 100%;
   }
@@ -951,6 +954,8 @@ hr {
   padding: 50px 0;
 }
 
+
+
 .brands-logo {
   display: flex;
   flex-wrap: wrap;
@@ -965,18 +970,18 @@ hr {
 
 @media (max-height: 650px) {
   .brands-logo-item {
+    flex-basis: 25%;
+  }
+}
+@media (min-width: 450px) {
+  .brands-logo-item {
+    flex-basis: 25%;
+  }
+}
+
+@media (min-width: 650px) {
+  .brands-logo-item {
     flex-basis: 30%;
-  }
-}
-@media (max-width: 600px) {
-  .brands-logo-item {
-    flex-basis: 100%;
-  }
-}
-@media (max-width: 449px) {
-  .brands-logo-item {
-    flex-basis: 33%;
-    height: 75px;
   }
 }
 .brands-logo img {
@@ -987,7 +992,7 @@ hr {
   transform: translateY(-50%);
 }
 @media (max-height: 650px) {
-  .grid-logos img[data-v-d09308c6] {
+  .brands-logo img {
     max-height: 75px;
     max-width: 125px;
     position: relative;
@@ -1009,20 +1014,10 @@ hr {
   position: absolute;
   right: 0;
   background-position: 50%;
-  width: 100%;
+  width: 55vw;
   height: 100%;
 }
 
-@media only screen and (max-width: 1023px) {
-  .background-img {
-    width: 100%;
-    height: 50vh;
-    position: relative;
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: no-repeat;
-  }
-}
 @media (max-height: 1200px) {
   .background-img {
     height: 65%;
@@ -1051,12 +1046,6 @@ hr {
   .background-img {
     width: 100%;
     height: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .background-img {
-    height: 25vh;
   }
 }
 .career-section {
@@ -1261,7 +1250,7 @@ hr {
   position: absolute;
   top: -75px;
   left: -75px;
-  z-index: 1;
+  z-index: -1;
 }
 
 .bottom-background {
@@ -1271,7 +1260,7 @@ hr {
   position: absolute;
   bottom: -75px;
   right: -75px;
-  z-index: 1;
+  z-index: -1;
 }
 
 @media (max-width: 1023px) {
