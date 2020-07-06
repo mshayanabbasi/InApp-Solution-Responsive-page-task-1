@@ -768,26 +768,17 @@ hr {
 
 
 .childs {
-  width: 280px;
+  width: 270px;
   padding: 0px 20px;
 }
 
-@media only screen and (max-width: 800px) {
+@media (min-width: 768px) {
   .childs {
-    width: 300px;
-    justify-content: center;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 33%;
   }
 }
 
-@media (max-width: 450px) {
-  .childs {
-    width: 95%;
-  }
-}
+
 
 .childs img {
   margin-top: 25px;
